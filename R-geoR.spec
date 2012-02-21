@@ -1,28 +1,28 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  geoR
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.7_2
-Release:          1
+Release:          2
 Summary:          Analysis of geostatistical data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.7-2.tar.gz
-Requires:         R-stats R-sp R-methods R-MASS 
+Requires:         R-stats R-sp R-methods R-MASS
 Requires:         R-splancs R-RandomFields 
 %if %{with bootstrap}
-Requires:         R-scatterplot3d R-tcltk R-lattice R-graphics 
+Requires:         R-scatterplot3d R-tcltk R-lattice R-graphics
 %else
-Requires:         R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics 
+Requires:         R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-sp R-methods R-MASS
-BuildRequires:    R-splancs R-RandomFields 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-sp
+BuildRequires:    R-methods R-MASS R-splancs R-RandomFields
 %if %{with bootstrap}
-BuildRequires:    R-scatterplot3d R-tcltk R-lattice R-graphics 
+BuildRequires:    R-scatterplot3d R-tcltk R-lattice R-graphics
 %else
-BuildRequires:    R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics 
+BuildRequires:    R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics
 %endif
 
 %description
