@@ -10,19 +10,16 @@ Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.7-2.tar.gz
-Requires:         R-stats R-sp R-methods R-MASS
-Requires:         R-splancs R-RandomFields 
-%if %{with bootstrap}
+Requires:         R-stats R-sp R-methods R-MASS R-splancs R-RandomFields
 Requires:         R-scatterplot3d R-tcltk R-lattice R-graphics
-%else
-Requires:         R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics
+%if %{without bootstrap}
+Requires:         R-geoRglm
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-sp
-BuildRequires:    R-methods R-MASS R-splancs R-RandomFields
-%if %{with bootstrap}
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-stats R-sp R-methods R-MASS R-splancs R-RandomFields
 BuildRequires:    R-scatterplot3d R-tcltk R-lattice R-graphics
-%else
-BuildRequires:    R-scatterplot3d R-tcltk R-geoRglm R-lattice R-graphics
+%if %{without bootstrap}
+BuildRequires:    R-geoRglm
 %endif
 
 %description
