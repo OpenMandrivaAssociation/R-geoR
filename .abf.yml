@@ -1,2 +1,4 @@
+removed_sources:
+  geoR_1.7-2.tar.gz: a3e47912f21381c088272a03c6a1bfb31c5bcc20
 sources:
-  "geoR_1.7-2.tar.gz:"	a3e47912f21381c088272a03c6a1bfb31c5bcc20
+  geoR_1.7-4.tar.gz: 10a3136b41cd9f01e5f9fc5d27e2c8c918905721
