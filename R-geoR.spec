@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.7_4
+Version:          1.7.4
 Release:          1
 Summary:          Analysis of geostatistical data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.7-4.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/geoR_1.7-4.tar.gz
 Requires:         R-stats R-sp R-methods R-MASS R-splancs R-RandomFields
 Requires:         R-scatterplot3d R-tcltk R-lattice R-graphics
 %if %{without bootstrap}
@@ -56,3 +56,4 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+
