@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.7_4
-Release:          1
+Release:          2
 Summary:          Analysis of geostatistical data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
